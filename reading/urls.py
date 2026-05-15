@@ -45,6 +45,13 @@ urlpatterns = [
         content_type="application/xml"
     ),
     ),
+    path(
+    "google1234567890abcd.html",
+    TemplateView.as_view(
+        template_name="google1234567890abcd.html",
+        content_type="text/html"
+    ),
+),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
