@@ -46,9 +46,9 @@ urlpatterns = [
     ),
     ),
     path(
-    "google1234567890abcd.html",
+    "google5d90924031cd11a4.html",
     TemplateView.as_view(
-        template_name="google1234567890abcd.html",
+        template_name="google5d90924031cd11a4.html",
         content_type="text/html"
     ),
 ),
