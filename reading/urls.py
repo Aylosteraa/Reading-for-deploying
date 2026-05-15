@@ -33,7 +33,18 @@ urlpatterns = [
         template_name="robots.txt",
         content_type="text/plain"
     ),
-),
+    ),
+    path(
+        'crossdomain.xml', 
+        TemplateView.as_view(template_name='crossdomain.xml', content_type='text/xml')
+    ),
+    path(
+    "clientaccesspolicy.xml",
+    TemplateView.as_view(
+        template_name="clientaccesspolicy.xml",
+        content_type="application/xml"
+    ),
+    ),
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
